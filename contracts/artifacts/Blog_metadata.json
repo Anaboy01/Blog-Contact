@@ -1,0 +1,240 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "uint256",
+						"name": "postId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "postHead",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "message",
+						"type": "string"
+					}
+				],
+				"name": "PostCreated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_comment",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_postIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "commentOnBlog",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_postHead",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_postBody",
+						"type": "string"
+					}
+				],
+				"name": "createBlog",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getAllBlogs",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "creator",
+								"type": "address"
+							},
+							{
+								"internalType": "uint256",
+								"name": "id",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string[]",
+								"name": "comments",
+								"type": "string[]"
+							},
+							{
+								"internalType": "uint256",
+								"name": "thumbsUp",
+								"type": "uint256"
+							},
+							{
+								"internalType": "string",
+								"name": "postHead",
+								"type": "string"
+							},
+							{
+								"internalType": "string",
+								"name": "postBody",
+								"type": "string"
+							}
+						],
+						"internalType": "struct Blog.Post[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "getBlog",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					},
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "nextId",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_postIndex",
+						"type": "uint256"
+					}
+				],
+				"name": "upThumbs",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Blog.sol": "Blog"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Blog.sol": {
+			"keccak256": "0xa732be8223734ba796357a39829ec55a7cea66ba792a592889450f3c7d0b4617",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a5a09adeee1b1e4f12bcb44a8500c92e5a033bd668f4f8baa7401d1a5325f659",
+				"dweb:/ipfs/Qmf7TzKugcW4BfdhhCbBwubeZ3ZXbUmX4QRoSEdrbmqTDR"
+			]
+		}
+	},
+	"version": 1
+}
